@@ -21,3 +21,10 @@ def transform(name: str) -> str:
 
 if __name__ == '__main__':
     print(transform('HelloWorld'))
+
+#     Variant 2 -- list comprehension
+#     only 3 rows
+    variable_name = 'HElloworld'
+    lst = list(variable_name)
+    print(
+        ''.join(list(variable_name[0].lower()) + ['_' + elem.lower() if elem.isupper() else elem for elem in lst[1:]]))
